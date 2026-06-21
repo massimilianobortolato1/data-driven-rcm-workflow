@@ -4,8 +4,10 @@ The framework is automated in Python and Power BI: Python handles the data proce
 It's also architected to be integrated into an agentic workflow: the modular, step-by-step structure means the same logic a reliability engineer follows manually could be driven by an AI agent, extending the analysis into areas humans rarely have time to fully cover. The current build implements the analytical workflow itself; the agentic layer described below is what the architecture is designed to support as a next step.
 Here's how it works, screen by screen — and where an agent would extend each step.
 ---
-1. Prioritize the assets — honestly, and continuously
+1. Prioritize the assets continuously
+
 ![System-level Pareto](images/01-system-pareto.png)
+
 The starting point is a Pareto, but not the usual "count the failures" version. Counting failures rewards the machine that breaks often and cheaply over the one that breaks rarely and catastrophically. Instead, each asset is scored on what actually matters:
 Severity of the downtime each failure causes
 Recurrence — chronic, repeating problems weigh more than one-offs
