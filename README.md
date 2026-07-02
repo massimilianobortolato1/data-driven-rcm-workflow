@@ -7,10 +7,11 @@ Here's how it works, screen by screen — and where an agent would extend each s
 1. Prioritize the assets, continuously
 ![System-level Pareto](images/01-system-pareto.png)
 The starting point is a Pareto, but not the usual "count the failures" version. Counting failures rewards the machine that breaks often and cheaply over the one that breaks rarely and catastrophically. Instead, each asset is scored on what actually matters:
-Severity of the downtime each failure causes
+
 Recurrence — chronic, repeating problems weigh more than one-offs
 Recency — recent failures matter more than old ones
-Sensitivity — how critical that asset is to the process
+Sensitivity — how critical that asset is to the process, based on availability model
+
 Because recency is built in, the ranking updates itself. Fix a problem and the asset fades from the list; if it stays near the top, the fix didn't hold. The priority list doubles as a validation tool.
 Where an agent fits: this ranking could be monitored continuously rather than at review meetings, flagging the moment a failure mode climbs into the vital few — and beginning the analysis below before a human opens the report.
 ---
