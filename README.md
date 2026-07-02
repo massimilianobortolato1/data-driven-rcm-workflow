@@ -4,8 +4,8 @@ The framework is automated in Python and Power BI: Python handles the data proce
 It's also architected to be integrated into an agentic workflow: the modular, step-by-step structure means the same logic a reliability engineer follows manually could be driven by an AI agent, extending the analysis into areas humans rarely have time to fully cover. The current build implements the analytical workflow itself; the agentic layer described below is what the architecture is designed to support as a next step.
 Here's how it works, screen by screen — and where an agent would extend each step.
 ---
-1. Prioritize the assets, continuously<br>
-![System-level Pareto](images/01-system-pareto.png)<br>
+1. Prioritize the assets, continuously
+![System-level Pareto](images/01-system-pareto.png)
 The starting point is a Pareto, but not the usual "count the failures" version. Counting failures rewards the machine that breaks often and cheaply over the one that breaks rarely and catastrophically. Instead, each asset is scored on what actually matters:<br>
 
 Recurrence — chronic, repeating problems weigh more than one-offs<br>
@@ -14,6 +14,7 @@ Sensitivity — how critical that asset is to the process, based on availability
 
 Because recency is built in, the ranking updates itself. Fix a problem and the asset fades from the list; if it stays near the top, the fix didn't hold. The priority list doubles as a validation tool.
 Where an agent fits: this ranking could be monitored continuously rather than at review meetings, flagging the moment a failure mode climbs into the vital few — and beginning the analysis below before a human opens the report.
+
 ---
 2. Drill into the failure mode
 ![Asset-level Pareto](images/02-asset-pareto.png)
